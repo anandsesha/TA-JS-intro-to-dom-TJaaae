@@ -1,6 +1,6 @@
 // 1. Change the title of the page to `Hello AltCampus!`
 
-document.title = 'AltCampus'
+document.title = 'Hello AltCampus'
 
 // 2. Select the element using the children property:
 
@@ -10,8 +10,8 @@ document.title = 'AltCampus'
 //    - Select the input element with name `email`
 
 document.body.children[0].innerHTML = 'Learning DOM'
-document.querySelector('.topics').firstElementChild.innerHTML = 'all about document'
-document.getElementById('email')
+document.body.children[5].children[0].innerHTML = 'all about document'
+document.body.children[6].children[0]
 
 // 3. Log the number (using console.log) of children of all the `li` element inside the ul with class `topics`
 
@@ -20,7 +20,7 @@ console.log(document.querySelector('.topics').childElementCount)
 
 // 4. Select the first input using the `type` selector and store them in variable named `emailInput`
 
-let emailInput = document.querySelector('#email')
+let emailInput = document.querySelector('input')
 
 // 5. Select the ul element using class selector and store in `topics`
 
@@ -48,13 +48,11 @@ let allTopics = document.querySelectorAll('li')
 
 // 11. Select all the input element of any type and store in `allInput`
 
-let allInput = document.querySelectorAll('input[type=email]')
+let allInput = document.querySelectorAll('input')
 
 // 12. Use forEach to console the `innerText` property of all the li element in `allTopics` variable.
 
-console.log(allTopics.forEach((li) => {
-    console.log(li.innerText) 
-}))
+allTopics.forEach((li) => console.log(li.innerText))
 
 // 13. Select all the elements with class `list` and store in variable `listOfSelectedTopics`
 
@@ -74,7 +72,7 @@ let allPElement = document.querySelectorAll('p')
 
 // 17. Select all the buttons and log the count of buttons.
 
-console.log(`The count of buttons is ${document.querySelectorAll('input[type="submit"]').length}`) 
+console.log(`The count of buttons is ${document.querySelectorAll('button').length}`) 
 
 // 18. Select all the `label` element and log the count.
 
