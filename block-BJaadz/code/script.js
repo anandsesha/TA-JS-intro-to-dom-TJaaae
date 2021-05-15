@@ -31,8 +31,8 @@ allHrs.forEach((eachHr) => eachHr.style.border = '1px solid tomato')
 
 // Change the background of all the hr to "antiquewhite" using for of loop.
 
-for(let eachHr of allHrs){
-  eachHr.style.background = 'antiquewhite'
+for(let eachHr of allHrsArray){
+  eachHr.style.backgroundColor = 'antiquewhite'
 }
 
 // Change the 'border-radius' of all the hr to "5px" using array.
@@ -49,7 +49,7 @@ heading.style.fontSize = '3rem'
 
 // Change the border of hr with class 'image' to `2px solid purple`.
 
-let imageHrNodeList = document.querySelectorAll('.image')
+let imageHrNodeList = document.querySelectorAll('hr.image')
 imageHrNodeList.forEach((eachImgHr) => eachImgHr.style.border = '2px solid purple')
 
 // Hide the box number 17 (last box).
@@ -145,7 +145,7 @@ document.querySelector('.one').style.fontSize = '0.8rem'
 let arrayOfAllBoxes = Array.from(document.querySelectorAll('.box'))
 
 let arrayOfAlternateBoxes = arrayOfAllBoxes.filter((box,index,array) => index%2==0)
-arrayOfAlternateBoxes.forEach((altbox) => altbox.style.background = 'aliceblue')
+arrayOfAlternateBoxes.forEach((altbox) => altbox.style.backgroundColor = 'aliceblue')
 
 // add a class named "awesome-box" to the box 6 using classList property of DOM element.
 
@@ -161,7 +161,8 @@ document.querySelector('.four').classList.remove('awesome-box')
 
 // Change the background of the body to bisque
 
-document.querySelector('body').style.background = 'bisque'
+// document.querySelector('body').style.background = 'bisque'
+document.body.style.background = 'bisque'
 
 // Create a button and store it in a variable named 'btn'
 
@@ -169,11 +170,11 @@ let btn = document.createElement('button')
 
 // textContent of the button should be 'Click Me'
 
-btn.innerText = 'Click Me'
+btn.textContent = 'Click Me'
 
 // Change the background of the btn to 'oldlace'
 
-btn.style.background = 'oldace'
+btn.style.backgroundColor = 'oldace'
 
 // Change the font size of the btn to 1rem
 
@@ -195,7 +196,6 @@ document.querySelector('.nine').append(btn)
 
 let imgElm = document.createElement('img')
 imgElm.src = 'https://images.unsplash.com/photo-1592500595497-d1f52a40b207?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80'
-
 
 // Select the box 7 using class seven
 
