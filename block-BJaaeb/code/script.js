@@ -8,7 +8,7 @@ default value to be "text" and return the input element inside label. (create it
 function createInputElm(label,type="text"){
   let labelTag = document.createElement('label')
   let inputTag = document.createElement('input')
-  inputTag.type = `${type}`;
+  inputTag.type = type;
   labelTag.innerText = label;
   labelTag.append(inputTag);
   return labelTag;
@@ -48,6 +48,14 @@ function createList(array){
 }
 
 
+function createList1(array){
+  let html = `<ul>
+    ${array.map((elm) => `<li>${elm}</li>`).join("")}
+  </ul>`; 
+  return html;
+}
+
+
 // TEST
 createList(['ALABAMA', 'ALASKA', 'HAWAII', 'KENTUCKY']);
 createList(['Afghanistan', 'Antarctica', 'Congo', 'Estonia']);
@@ -64,7 +72,7 @@ createList(['Afghanistan', 'Antarctica', 'Congo', 'Estonia']);
 </ul>
 */
 
-function createTodoList(array){
+function createTodoList(array=[]){
   let ul = document.createElement('ul')
   let li = document.createElement('li')
   ul.append(li);
@@ -74,7 +82,7 @@ function createTodoList(array){
 
   let input = document.createElement('input')
   input.type = "checkbox";
-  input.checked = "checked";
+  input.checked = array[1].isDone;
   input.name = "";
   input.id = "";
   li.append(input)
