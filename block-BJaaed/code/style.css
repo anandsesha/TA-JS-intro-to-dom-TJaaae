@@ -51,7 +51,7 @@ table {
 
 .container{
     margin: 0 auto;
-    max-width: 1600px;
+    max-width: 1300px;
     padding: 1rem 2rem;
 }
 body {
@@ -68,15 +68,37 @@ body {
 ul{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 li{
-    flex: 0 1 30%;
+    flex: 0 1 27%;
     background-color: #fff;
     text-align: center;
     padding: 1.5rem 1rem;
-    border: 1px solid black;
+    margin: 1rem 1.2rem;
 }
 img{
     width: 70%;
+    text-align: center;
+}
+h2{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: black;
+    padding: 1rem 0;
+}
+p,span{
+    margin-bottom: 1rem;
+    color: #9c9999;
+}
+button{
+    padding: 0.6rem 1.6rem;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #387d81;
+    border: 0;
+    font-size: 1rem;
+}
+
+.list{
+    margin-bottom: 1rem;
 }

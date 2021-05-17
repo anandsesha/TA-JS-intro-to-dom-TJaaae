@@ -1,5 +1,4 @@
-let data = 
-{
+let data = {
     books: [
       {
         isbn: "9781593275846",
@@ -116,33 +115,40 @@ let data =
         website: "https://shichuan.github.io/javascript-patterns/",
       },
     ],
-  };
+}
 
 document.body.style.backgroundColor = '#fdf5e8' 
 
+{/* <li>
+    <img src="https://eloquentjavascript.net/img/cover.jpg" alt=""Book-1>
+    <h2>Eloquent JavaScript, Second Edition</h2>
+    <p>Author:<span>Marijn Haverbeke</span></h6>
+    <button>Buy Now</button>
+</li> */}
 
-/* <img src="" alt="">
-      <h2></h2>
-      <h6></h6>
-      <button></button> */
+let ul = document.querySelector(".container")      
 
-let ul = document.querySelector('ul')      
+
 data.books.forEach((val) => {
     let li = document.createElement('li')
     let img = document.createElement('img')
     let h2 = document.createElement('h2')
-    let h6 = document.createElement('h6')
+    let p = document.createElement('p')
+    let span = document.createElement('span')
     let button = document.createElement('button')
-    button.style.padding = '2rem 3rem'
-    button.style.backgroundColor = '#377f7f'
-    button.style.color = 'white'
-    button.style.fontSize = '1.2rem'
-
+    
     img.src = val.image;
+    img.alt = val.title;
     h2.innerText = val.title;
-    h6.innerText = val.author;
+    p.innerText = 'Author:';
     button.innerText = 'Buy Now'
 
-    li.append(img,h2,h6,button)
+    let authorName = document.createTextNode(val.author);
+    span.append(authorName)
+    p.append(span)
+
+    li.append(img,h2,p,button)
+
+    
     ul.append(li)
 });
