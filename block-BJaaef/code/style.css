@@ -75,7 +75,6 @@ h2 {
   max-width: 1600px;
   margin: 0 auto;
   padding: 1rem 2rem;
-  border: 1px solid black;
 }
 header h1{
   font-size: 2rem;
@@ -88,7 +87,6 @@ header h1{
 
 div{
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
 }
 .box ul{
@@ -114,12 +112,11 @@ h2{
   margin: 2rem 0;
   padding: 1.6rem;
   border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.img-name{
-  /* display: flex; */
-  /* align-items: center; */
-}
 p{
   margin: 1rem 0;
   text-align: center;
